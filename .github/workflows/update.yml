@@ -12,17 +12,19 @@ jobs:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
       - name: Install dependencies
+        run: sudo apt install rename
+      - name: Download data
         run: |
-          sudo apt install rename
-      - name: Download dara
-        run: |
+          rm -rf inchikeys
+          mkdir inchikeys
           curl -H "Accept: text/tab-separated-values" --data-urlencode query@wikidata/inchikeys.rq -G https://query.wikidata.org/bigdata/namespace/wdq/sparql -o tmp1.tsv
           cat tmp1.tsv | sed -e "s/\"Q//" | sed -e "s/\"//g" | grep -v "wikidata" | sort -n | sed -e 's/^/Q/' | split -l 12500 -d -a 3 - inchikeys_
-          rm inchikeys/inchikeys*.tsv
           rename 's/(.*)/$1.tsv/' inchikeys_*
           mv inchikeys_* inchikeys/.
+          rm tmp1.tsv
       - name: Commit files
         run: |
+          git add --all
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m "Automatically update" -a
