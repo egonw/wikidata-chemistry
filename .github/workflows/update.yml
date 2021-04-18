@@ -1,0 +1,33 @@
+name: Update Data
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+      - name: Install dependencies
+        run: |
+          sudo apt install rename
+      - name: Download dara
+        run: |
+          curl -H "Accept: text/tab-separated-values" --data-urlencode query@wikidata/inchikeys.rq -G https://query.wikidata.org/bigdata/namespace/wdq/sparql -o tmp1.tsv
+          cat tmp1.tsv | sed -e "s/\"Q//" | sed -e "s/\"//g" | grep -v "wikidata" | sort -n | sed -e 's/^/Q/' | split -l 12500 -d -a 3 - inchikeys_
+          rm inchikeys/inchikeys*.tsv
+          rename 's/(.*)/$1.tsv/' inchikeys_*
+          mv inchikeys_* inchikeys/.
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Automatically update" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
