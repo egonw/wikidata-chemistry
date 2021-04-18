@@ -8,4 +8,5 @@ curl -H "Accept: text/tab-separated-values" --data-urlencode query@wikidata/inch
 cat tmp1.tsv | sed -e "s/\"Q//" | sed -e "s/\"//g" | grep -v "wikidata" | sort -n | sed -e 's/^/Q/' | split -l 12500 -d - inchikeys_
 rm inchikeys*.tsv
 rename 's/(.*)/$1.tsv/' inchikeys_*
+mv inchikeys_* inchikeys/.
 ```
