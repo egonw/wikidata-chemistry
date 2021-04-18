@@ -10,3 +10,10 @@ rm inchikeys/inchikeys*.tsv
 rename 's/(.*)/$1.tsv/' inchikeys_*
 mv inchikeys_* inchikeys/.
 ```
+
+Making release is occassionaly done, upon request. Each release contains the full TSV file
+as attachment for easy reuse.
+
+```shell
+cat tmp1.tsv | sed -e "s/\"Q//" | sed -e "s/\"//g" | grep -v "wikidata" | sort -n | sed -e 's/^/Q/' > inchikeys`date +"%Y%m%d"`.tsv
+```
