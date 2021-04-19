@@ -21,10 +21,9 @@ jobs:
           cat tmp1.tsv | sed -e "s/\"Q//" | sed -e "s/\"//g" | grep -v "wikidata" | sort -n | sed -e 's/^/Q/' | split -l 12500 -d -a 3 - inchikeys_
           rename 's/(.*)/$1.tsv/' inchikeys_*
           mv inchikeys_* inchikeys/.
-          rm tmp1.tsv
       - name: Commit files
         run: |
-          git add --all
+          git add inchikeys
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m "Automatically update" -a
@@ -33,3 +32,15 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
+      - name: Get current date  # see https://stackoverflow.com/questions/60942067/get-current-date-and-time-in-github-workflows
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y%m%d')"
+      - name: Prepare full file
+        run: cat tmp1.tsv | sed -e "s/\"Q//" | sed -e "s/\"//g" | grep -v "wikidata" | sort -n | sed -e 's/^/Q/' > inchikeys`date +"%Y%m%d"`.tsv
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "${{ steps.date.outputs.date }}"
+          prerelease: false
+          title: "Release ${{ steps.date.outputs.date }}"
+          files: "inchikeys${{ steps.date.outputs.date }}.tsv"
