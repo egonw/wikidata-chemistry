@@ -50,9 +50,9 @@ Q	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.ja
 Q	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
 Q	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
 Q  ?compound wdt:P235 ?key .
+QSPARQL-QUERY: queryStr=
 Qjava.util.concurrent.TimeoutException
 Q}
-Q8SPARQL-QUERY: queryStr=
 Q660	FYYHWMGAXLPEAU-UHFFFAOYSA-N
 Q663	XAGFODPZIPBFFR-UHFFFAOYSA-N
 Q671	KLMCZVJOEAUDNE-UHFFFAOYSA-N
