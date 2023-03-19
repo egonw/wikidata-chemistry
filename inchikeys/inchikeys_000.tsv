@@ -1,58 +1,3 @@
-Q
-Q	at ch.qos.logback.classic.helpers.MDCInsertingServletFilter.doFilter(MDCInsertingServletFilter.java:49)
-Q	at com.bigdata.rdf.sail.webapp.BigdataServlet.submitApiTask(BigdataServlet.java:292)
-Q	at com.bigdata.rdf.sail.webapp.MultiTenancyServlet.doGet(MultiTenancyServlet.java:273)
-Q	at com.bigdata.rdf.sail.webapp.QueryServlet.doGet(QueryServlet.java:290)
-Q	at com.bigdata.rdf.sail.webapp.QueryServlet.doSparqlQuery(QueryServlet.java:678)
-Q	at com.bigdata.rdf.sail.webapp.RESTServlet.doGet(RESTServlet.java:240)
-Q	at java.lang.Thread.run(Thread.java:750)
-Q	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
-Q	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
-Q	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
-Q	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
-Q	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
-Q	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
-Q	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
-Q	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
-Q	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
-Q	at org.eclipse.jetty.server.Server.handle(Server.java:503)
-Q	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1340)
-Q	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1242)
-Q	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:220)
-Q	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:126)
-Q	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
-Q	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
-Q	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
-Q	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:146)
-Q	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
-Q	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:257)
-Q	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
-Q	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
-Q	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
-Q	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
-Q	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1634)
-Q	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1642)
-Q	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1642)
-Q	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1642)
-Q	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1642)
-Q	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1642)
-Q	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1642)
-Q	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1642)
-Q	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1655)
-Q	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
-Q	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
-Q	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:865)
-Q	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
-Q	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
-Q	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:366)
-Q	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
-Q	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:126)
-Q	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
-Q	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
-Q  ?compound wdt:P235 ?key .
-QSPARQL-QUERY: queryStr=
-Qjava.util.concurrent.TimeoutException
-Q}
 Q153	LFQSCWFLJHTTHZ-UHFFFAOYSA-N
 Q283	XLYOFNOQVPJJNP-UHFFFAOYSA-N
 Q560	SWQJXJOGLNCZEY-UHFFFAOYSA-N
@@ -811,6 +756,7 @@ Q188543	NLXLAEXVIDQMFP-UHFFFAOYSA-N
 Q189090	YGYAWVDWMABLBF-UHFFFAOYSA-N
 Q189298	OXNIZHLAWKMVMX-UHFFFAOYSA-N
 Q189334	TZRXHJWUDPFEEY-UHFFFAOYSA-N
+Q189335	TXAHJXBWFZQNQY-UHFFFAOYSA-N
 Q189522	LOUPRKONTZGTKE-WZBLMQSHSA-N
 Q190012	OIRDTQYFTABQOQ-KQYNXXCUSA-N
 Q190020	XTFIVUDBNACUBN-UHFFFAOYSA-N
@@ -7644,7 +7590,6 @@ Q2698440	VNQXSTWCDUXYEZ-UHFFFAOYSA-N
 Q2698748	AOLPZAHRYHXPLR-UHFFFAOYSA-I
 Q2699676	VWFJDQUYCIWHTN-YFVJMOTDSA-N
 Q2699683	ZZTCCAPMZLDHFM-UHFFFAOYSA-N
-Q2700125	HLCSDJLATUNSSI-JXMROGBWSA-N
 Q2700125	HLCSDJLATUNSSI-UHFFFAOYSA-N
 Q2700511	JWMFYGXQPXQEEM-WZBAXQLOSA-N
 Q2700587	OILXMJHPFNGGTO-ZAUYPBDWSA-N
@@ -10303,6 +10248,7 @@ Q4596748	RKMGAJGJIURJSJ-UHFFFAOYSA-N
 Q4596749	HEWZVZIVELJPQZ-UHFFFAOYSA-N
 Q4596752	XRMVWAKMXZNZIL-UHFFFAOYSA-N
 Q4596753	CDUYAMDJQXHINM-UHFFFAOYSA-N
+Q4596754	WVNJEHORYAZBRZ-UHFFFAOYSA-N
 Q4596755	WWJDLIUDQHFAGC-UHFFFAOYSA-N
 Q4596756	GEAGRKQCZVLNAU-UHFFFAOYSA-N
 Q4596757	OSCDUVMWLUYRCU-UHFFFAOYSA-N
@@ -12143,6 +12089,7 @@ Q5280075	MTPLCRHXXMCRGG-SQEFCJGSSA-N
 Q5280076	FFBDFADSZUINTG-UHFFFAOYSA-N
 Q5280077	APMMVXSVJLZZRR-UHFFFAOYSA-N
 Q5280078	NTGLQWGMESPVBV-UHFFFAOYSA-N
+Q5280124	YOPYGGKAYWMQAB-APZUKWRQSA-N
 Q5280140	NYIZXMGNIUSNKL-UHFFFAOYSA-N
 Q5280143	NMLMACJWHPHKGR-NCOIDOBVSA-N
 Q5280261	UPKAWFACSJWKND-ZXFFUEEESA-J
@@ -12498,3 +12445,56 @@ Q5462356	ODKNJVUHOIMIIZ-RRKCRQDMSA-N
 Q5462605	IRYFCWPNDIUQOW-UHFFFAOYSA-N
 Q5462609	VXGSZBZQCBNUIP-UHFFFAOYSA-N
 Q5462612	FXNCRITWFOVSEP-UHFFFAOYSA-N
+Q5462615	NJNWEGFJCGYWQT-VSXGLTOVSA-N
+Q5462629	CXLOIJUDIPVKOU-UHFFFAOYSA-N
+Q5462632	POPFMWWJOGLOIF-XWCQMRHXSA-N
+Q5462651	XAERLJMOUYEBAB-UHFFFAOYSA-N
+Q5462775	NMGYDYBWRZHLHR-UHFFFAOYSA-N
+Q5462776	OPYFPDBMMYUPME-UHFFFAOYSA-N
+Q5462791	WJOHZNCJWYWUJD-IUGZLZTKSA-N
+Q5462792	PUWHHWCHAVXSIG-NCLPIGKXSA-N
+Q5462793	GAKMQHDJQHZUTJ-ULHLPKEOSA-N
+Q5462798	RZILCCPWPBTYDO-UHFFFAOYSA-N
+Q5462802	FWQHNLCNFPYBCA-UHFFFAOYSA-N
+Q5462806	AFMVESZOYKHDBJ-UHFFFAOYSA-N
+Q5462857	VHFBTKQOIBRGQP-UHFFFAOYSA-N
+Q5462864	PAXWQORCRCBOCU-LURJTMIESA-N
+Q5462868	MDQRDWAGHRLBPA-UHFFFAOYSA-N
+Q5462870	PUPFATUGTIQBQA-UZQPLGKSSA-N
+Q5462879	YNESUKSMQODWNS-UHFFFAOYSA-N
+Q5462880	JTAJFHGSVCEPKC-UHFFFAOYSA-N
+Q5462882	XSOUHEXVEOQRKJ-IUCAKERBSA-N
+Q5462884	HHPZZKDXAFJLOH-QZIXMDIESA-N
+Q5462885	CHQKHXJPWDSTPY-UHFFFAOYSA-N
+Q5462886	DEFOZIFYUBUHHU-IYQKUMFPSA-N
+Q5462887	ZWOUXWWGKJBAHQ-UHFFFAOYSA-N
+Q5462893	XOEUHCONYHZURQ-HNUBZJOYSA-N
+Q5462894	KGPPDNUWZNWPSI-UHFFFAOYSA-N
+Q5462900	JKQQZJHNUVDHKP-FQJIPJFPSA-N
+Q5462935	WMFSSTNVXWNLKI-UHFFFAOYSA-N
+Q5462967	RMFYWNFETXNTIQ-UHFFFAOYSA-N
+Q5462983	OFVXPDXXVSGEPX-UHFFFAOYSA-N
+Q5462984	QHMWCHQXCUNUAK-UHFFFAOYSA-N
+Q5464387	UBLXEEBHYISRFM-UHFFFAOYSA-M
+Q5469311	CXQHYVUVSFXTMY-UHFFFAOYSA-N
+Q5470067	AMVODTGMYSRMNP-GNIMZFFESA-N
+Q5470178	VGGRCVDNFAQIKO-UHFFFAOYSA-N
+Q5470216	QNXUUBBKHBYRFW-DEENWUMDSA-N
+Q5470249	AIKKULXCBHRFOS-UHFFFAOYSA-N
+Q5470253	NPCUJHYOBSHUJJ-UHFFFAOYSA-N
+Q5473321	JMYCGCXYZZHWMO-UHFFFAOYSA-N
+Q5473324	BARDROPHSZEBKC-OITMNORJSA-N
+Q5473363	XWLUWCNOOVRFPX-UHFFFAOYSA-N
+Q5473368	QVNNONOFASOXQV-UHFFFAOYSA-N
+Q5473550	GKDRMWXFWHEQQT-UHFFFAOYSA-N
+Q5473865	RHJOIOVESMTJEK-UHFFFAOYSA-N
+Q5476523	XGEGHDBEHXKFPX-UHFFFAOYSA-N
+Q5477806	GTPHQORJKFJIRB-JTQLPTLWSA-N
+Q5479351	MBBOMCVGYCRMEA-UHFFFAOYSA-N
+Q5480422	YAIPYAQVBZPSSC-UHFFFAOYSA-N
+Q5481720	NKMJCVVUYDKHAV-UHFFFAOYSA-N
+Q5486808	MTAWKURMWOXCEO-UHFFFAOYSA-N
+Q5493262	MHZGKXUYDGKKIU-UHFFFAOYSA-N
+Q5494842	OHZNMGSGEFVFTI-UHFFFAOYSA-N
+Q5495131	QUKOJKFJIHSBKV-UHFFFAOYSA-N
+Q5506905	UYJUZNLFJAWNEZ-UHFFFAOYSA-N
